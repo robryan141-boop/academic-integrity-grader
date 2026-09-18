@@ -35,7 +35,7 @@ Don't rely on a generic "read a PDF/DOCX" tool that requires retries or reroutin
 
 **6. Score what's real. Gate what isn't.** Build a scoring table where genuinely-assessable sections get normal marks, and any section resting on fabricated/contradictory data is marked NOT GRADABLE with a one-line reason, kept separate from the numeric subtotal.
 
-**7. Optional — stress-test your own draft** before finalizing, especially for a high-stakes verdict. A multi-perspective self-critique pass (see the `llm-council` skill, if available, for a structured way to do this) is good for catching your own softening bias — it's easy to read a well-written report and unconsciously grade the prose instead of the substance.
+**7. Optional — stress-test your own draft** before finalizing, especially for a high-stakes verdict. A multi-perspective self-critique pass (see the [Pairs well with: llm-council](#pairs-well-with-llm-council) section below) is good for catching your own softening bias — it's easy to read a well-written report and unconsciously grade the prose instead of the substance.
 
 **8. Write the corrections document in a human voice.** Structure suggestion:
    - A short, direct opening note (what's good, what's not, why the rest of this matters)
@@ -60,6 +60,15 @@ Don't rely on a generic "read a PDF/DOCX" tool that requires retries or reroutin
 A business-school internship report scored well on first read: clear objectives, a real and verifiable literature review, a solid theoretical framework. But its findings chapter stated outright that the analysis used "simulated data for demonstration," while the table of contents and annexures both described the same material as "actual responses collected." That is a direct self-contradiction about the authenticity of the report's core deliverable, and the institution's own guidelines required primary data collection.
 
 The right move was not to average this into a single score — a few points off "data analysis," a few off "overall quality." It was to score the sections that were genuinely done (the theoretical framework, the literature review — the latter independently verified citation-by-citation once one AI-tool artifact turned up in that chapter) and mark the data-analysis chapters as not gradable in current form, stating plainly what would need to happen (real data collection) before the report could be assessed as intended. When asked for a blunt final verdict, the honest answer — worked out from the institution's own numeric passing threshold — was a clear fail, not a hedge.
+
+## Pairs well with: llm-council
+
+If the [`llm-council`](https://github.com/topics/llm-council) skill (or an equivalent multi-perspective self-critique pattern) is available, run your draft assessment through it before finalizing — specifically for the verdict itself, not for the mechanical rubric extraction. It's most useful in exactly the situations this skill produces:
+
+- **It catches your own bias toward leniency.** A well-written report with one serious integrity problem is the hardest case to grade correctly — it's tempting to reason "the rest is so good, this must be fixable" and soften a gating issue back into an averaged score. A council-style pass, where independent perspectives argue their assigned angle without hedging, reliably surfaces this: in practice, a perspective arguing for the charitable/optimistic read gets flagged by every other reviewer as the assessment's biggest blind spot, which is exactly the signal you want before finalizing a high-stakes verdict.
+- **It turns "I found one problem" into "I checked for all of them."** When one advisor's role is explicitly to push toward action items, it tends to surface the concrete next step you'd otherwise skip — e.g., "you found one leaked AI-artifact tag, now go grep the whole document for others" or "you praised the citations as real-looking, now go verify all of them, not just the two you liked." Both of those checks are cheap and both directly strengthen the credibility of your final verdict.
+- **It gives you convergence as evidence.** When independent perspectives land on the same critique without being told to, that's a real confidence signal for a verdict you're about to hand someone as a blunt pass/fail — much stronger than your own single read-through, however careful.
+- **Keep the council's fingerprints out of the final deliverable.** Use it to pressure-test your reasoning, then fold whatever holds up back into your own direct, first-person voice (see step 8) — don't hand the student/author a document that talks about "advisors" or "peer review," since that undercuts the human, direct tone this skill is built around.
 
 ## When NOT to use this
 

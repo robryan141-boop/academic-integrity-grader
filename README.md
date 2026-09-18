@@ -46,6 +46,10 @@ The skill will look up the real rubric, read the full document, score what's gen
 - `SKILL.md` — the skill definition Claude Code loads.
 - `scripts/find_ai_artifacts.py` — a small, extensible scanner for common leaked-AI-tool text patterns (broken citation tags, assistant-voice phrases like "please share a clearer image"). Extend the `PATTERNS` list for your own domain.
 
+## Pairs well with `llm-council`
+
+Before finalizing a high-stakes verdict, run your draft through a multi-perspective self-critique pass (e.g., the [`llm-council`](https://github.com/topics/llm-council) skill) if you have one available. It's good at catching exactly the failure mode this kind of grading is prone to: unconsciously softening a real integrity problem into an "areas for improvement" note because the rest of the report reads well. Independent perspectives arguing without hedging tend to flag that softening instinct directly, and often surface a concrete, cheap follow-up check (verify every citation, not just the one that looked suspicious; grep for more leaked artifacts, not just the one you found) that meaningfully strengthens the final call. See `SKILL.md` for details — keep the council's own framing out of what you actually hand back, though; fold its substance into your own direct voice.
+
 ## A note on the case this was built from
 
 This skill was generalized from a real grading session where a report's own table of contents and annexures described its findings as "actual responses collected," while the findings chapter itself said the data was "simulated for demonstration." That contradiction — not prose quality — was what actually mattered, and it's the kind of thing a rubric-line-item average will bury. No identifying details from that case are included here.
